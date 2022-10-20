@@ -1,0 +1,51 @@
+@import "_color.scss";
+.customCard {
+  background-color: $primary;
+  border: 1px solid $secondary;
+  div {
+    h5 {
+      color: rgb(36, 6, 6);
+    }
+  }
+  div {
+    a {
+      button {
+        position: relative;
+        background-color: black;
+        color: white;
+        width: 100%;
+        &:hover {
+          background-color: transparent;
+          border: 1px solid black;
+          .customCard {
+            transform: translate(1.2);
+          }
+        }
+        &:before {
+          content: "";
+          position: absolute;
+          display: block;
+          width: 10px;
+          height: 10px;
+          background-color: red;
+          border-radius: 50%;
+          top: 0;
+          left: 0;
+          transition: 0.3s;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          display: block;
+          width: 10px;
+          height: 10px;
+          background-color: red;
+          border-radius: 50%;
+          bottom: 0;
+          right: 0;
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+}
